@@ -71,16 +71,53 @@
 </head>
 <body>
 <div class="row text">
-<textarea name="try-it" class="try-it"></textarea></div>
+<textarea id="text1" class="try-it"></textarea></div>
 <div class="row">
-  <button class="btn success">clear</button>
-  <button class="btn info">copy</button>
-  <button class="btn warning">+</button>
-  <button class="btn danger">-</button>
+  <button class="btn success" ondblclick="clearContents('text1')">clear</button>
+  <button class="btn info" onclick="copy2clipboard('#text1')">copy</button>
+  <button class="btn warning" onclick="smaller('text1')">-</button>
+  <button class="btn danger" onclick="bigger('text1')">+</button>
 </div>
 
 <div class="row text">
-<textarea name="try-it" class="try-it"></textarea></div>
+<textarea id="text2"></textarea></div>
+<div class="row">
+  <button class="btn success" ondblclick="clearContents('text2')">clear</button>
+  <button class="btn info" onclick="copy2clipboard('#text2')">copy</button>
+  <button class="btn warning" onclick="smaller('text2')">-</button>
+  <button class="btn danger" onclick="bigger('text2')">+</button>
+</div>
+
+
+<script type="text/javascript">
+  function bigger(elementId) {
+    var a = document.getElementById(elementId).clientHeight;
+    document.getElementById(elementId).style.height = (a+10)+'px';
+  }
+
+  function smaller(elementId) {
+    var a = document.getElementById(elementId).clientHeight;
+    document.getElementById(elementId).style.height = (a-10)+'px';
+  }
+
+  function clearContents(element) {
+    document.getElementById(element).value = "";
+  }
+
+function copy2clipboard(textarea) {
+  var copyTextarea = document.querySelector(textarea);
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+}
+ 
+    </script>
 
 </body>
 </html>
