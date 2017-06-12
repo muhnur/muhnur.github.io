@@ -3,4 +3,4 @@
 
  
 
-<a href="/ug_vk">خۇشكەلدىڭىز</a>
+<a href="muhnur.github.io/ug_vk">خۇشكەلدىڭىز</a>
