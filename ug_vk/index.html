@@ -84,20 +84,20 @@
 <div class="row">
   <button class="btn success" ondblclick="clearContents('text2')">clear</button>
   <button class="btn info" onclick="copy2clipboard('#text2')">copy</button>
-  <button class="btn warning" onmousedown="smaller('text2')">-</button>
-  <button class="btn danger" onmousedown="bigger('text2')">+</button>
+  <button class="btn warning" onclick="smaller('text2')">-</button>
+  <button class="btn danger" onclick="bigger('text2')">+</button>
 </div>
 
 
 <script type="text/javascript">
   function bigger(elementId) {
     var a = document.getElementById(elementId).clientHeight;
-    document.getElementById(elementId).style.height = (a+1)+'px';
+    document.getElementById(elementId).style.height = (a+20)+'px';
   }
 
   function smaller(elementId) {
     var a = document.getElementById(elementId).clientHeight;
-    document.getElementById(elementId).style.height = (a-1)+'px';
+    document.getElementById(elementId).style.height = (a-20)+'px';
   }
 
   function clearContents(element) {
