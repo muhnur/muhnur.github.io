@@ -37,12 +37,12 @@
     }
 
     .btn {
-        border: none;
-        color: white;
-        padding: 14px 28px;
-        font-size: 16px;
-        cursor: pointer;
-        width: 24.5%;
+      float: left;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 25%;
     }
 
     .success {background-color: #009688;} /* Green */
@@ -59,6 +59,13 @@
 
     .default {background-color: #e7e7e7; color: black;} /* Gray */
     .default:hover {background: #ddd;}
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
     </style>
 </head>
 <body>
@@ -70,5 +77,9 @@
   <button class="btn warning">+</button>
   <button class="btn danger">-</button>
 </div>
+
+<div class="row text">
+<textarea name="try-it" class="try-it"></textarea></div>
+
 </body>
 </html>
