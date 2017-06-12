@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>Muhnur's Page</title>
+    <title>Muhnur's Page Title</title>
     <script src="ug_vk.min.js" type="text/javascript" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <script type="text/javascript">
         var UG_VK_OPTS = {
                 all: true,
@@ -73,8 +75,8 @@
 <div class="row text">
 <textarea id="text1" class="try-it"></textarea></div>
 <div class="row">
-  <button class="btn success" ondblclick="clearContents('text1')">clear</button>
-  <button class="btn info" onclick="copy2clipboard('#text1')">copy</button>
+  <button class="btn success" onclick="clearContents('text1')">clear</button>
+  <button class="btn info" onclick="compyContent('#text1')">copy</button>
   <button class="btn warning" onclick="smaller('text1')">-</button>
   <button class="btn danger" onclick="bigger('text1')">+</button>
 </div>
@@ -82,8 +84,8 @@
 <div class="row text">
 <textarea id="text2"></textarea></div>
 <div class="row">
-  <button class="btn success" ondblclick="clearContents('text2')">clear</button>
-  <button class="btn info" onclick="copy2clipboard('#text2')">copy</button>
+  <button class="btn success" onclick="myf('#text2')">clear</button>
+  <button class="btn info" onclick="compyContent('#text2')">copy</button>
   <button class="btn warning" onclick="smaller('text2')">-</button>
   <button class="btn danger" onclick="bigger('text2')">+</button>
 </div>
@@ -92,7 +94,7 @@
 <script type="text/javascript">
   function bigger(elementId) {
     var a = document.getElementById(elementId).clientHeight;
-    document.getElementById(elementId).style.height = (a+20)+'px';
+    document.getElementById(elementId).style.height = (a+2)+'px';
   }
 
   function smaller(elementId) {
@@ -116,7 +118,11 @@ function copy2clipboard(textarea) {
     console.log('Oops, unable to copy');
   }
 }
- 
+
+    function compyContent(jquerySelector){
+      $(jquerySelector).select();
+      document.execCommand('copy')
+    }
     </script>
 
 </body>
