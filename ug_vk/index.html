@@ -75,7 +75,7 @@
 <div class="row text">
 <textarea id="text1" class="try-it"></textarea></div>
 <div class="row">
-  <button class="btn success" onclick="clearContent('#text1')">clear</button>
+  <button class="btn success" onclick="clearContent('#text1', '#text3')">clear</button>
   <button class="btn info" onclick="copyContent('#text1')">copy</button>
   <button class="btn warning" onclick="smaller('text1')">-</button>
   <button class="btn danger" onclick="bigger('text1')">+</button>
@@ -84,11 +84,15 @@
 <div class="row text">
 <textarea id="text2"></textarea></div>
 <div class="row">
-  <button class="btn success" onclick="clearContent('#text2')">clear</button>
+  <button class="btn success" onclick="clearContent('#text2', '#text4')">clear</button>
   <button class="btn info" onclick="copyContent('#text2')">copy</button>
   <button class="btn warning" onclick="smaller('text2')">-</button>
   <button class="btn danger" onclick="bigger('text2')">+</button>
 </div>
+<div class="row text">
+<textarea id="text3"></textarea></div>
+<div class="row text">
+<textarea id="text4"></textarea></div>
 
 
 <script type="text/javascript">
@@ -124,7 +128,8 @@ function copy2clipboard(textarea) {
       document.execCommand('copy');
     }
 
-    function clearContent(jquerySelector){
+    function clearContent(jquerySelector, other){
+      $(other).val($(jquerySelector).val());
       $(jquerySelector).val("");
     }
 
