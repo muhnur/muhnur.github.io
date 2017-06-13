@@ -15,20 +15,9 @@
       blacklist: ['url', 'email']
     };
 
-    function copyToClipboard(elementId) {
-      // Create a "hidden" input
-      var aux = document.createElement("input");
-      // Assign it the value of the specified element
-      aux.setAttribute("value", document.getElementById(elementId).value);
-      // Append it to the body
-      document.body.appendChild(aux);
-      // Highlight its content
-      aux.select();
-      // Copy the highlighted text
-      document.execCommand("copy");
-      // Remove it from the body
-      document.body.removeChild(aux);
-      alert( document.getElementById(elementId).value );
+    function copyContent(jquerySelector){
+      $(jquerySelector).select();
+      document.execCommand('copy');
     }
     </script>
 
@@ -118,16 +107,13 @@
     }
 
     </style>
-        <!-- 2. Include library -->
-    <script src="clipboard.min.js"></script>
-    
 </head>
 <body>
 <div class="row text">
 <textarea id="text1" class="try-it"></textarea></div>
 <div class="row">
   <button class="btn success left" onclick="clearContent('#text1')">ئاستىغا</button>
-  <button class="btn info" onclick="copyToClipboard('text1')">كۆچۈرۈش</button>
+  <button class="btn info" onclick="copyContent('#text1')">كۆچۈرۈش</button>
   <button class="btn warning" onclick="smaller('text1')">-</button>
   <button class="btn danger right" onclick="bigger('text1')">+</button>
 </div>
@@ -189,24 +175,5 @@ function copy2clipboard(textarea) {
     </script>
 
 
-    <!-- 1. Define some markup -->
-    <textarea id="bar">hello</textarea>
-    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#bar">Cut</button>
-
-    <!-- 2. Include library -->
-    <script src="clipboard.min.js"></script>
-
-    <!-- 3. Instantiate clipboard -->
-    <script>
-    var clipboard = new Clipboard('.btn');
-
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-    </script>
 </body>
 </html>
