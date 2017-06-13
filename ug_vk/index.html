@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>Muhnur Online Uyghur IME</title>
+    <title>Muhnur's Page</title>
     <script src="ug_vk.min.js" type="text/javascript" async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -107,7 +107,7 @@
 <textarea id="text1" class="try-it"></textarea></div>
 <div class="row">
   <button class="btn success left" onclick="clearContent('#text1')">ئاستىغا</button>
-  <button class="btn info" onclick="copyContent('#text1')">كۆچۈرۈش</button>
+  <button class="btn info" onclick="copyToClipboard('#text1')">كۆچۈرۈش</button>
   <button class="btn warning" onclick="smaller('text1')">-</button>
   <button class="btn danger right" onclick="bigger('text1')">+</button>
 </div>
@@ -163,6 +163,13 @@ function copy2clipboard(textarea) {
       $('ul').empty();
     }
 
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).val()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
     </script>
 
 </body>
