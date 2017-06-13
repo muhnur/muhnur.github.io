@@ -30,14 +30,24 @@
         padding: 10px;
     }
 
+    textarea, ol {
+        font-family: 'UKIJEkran';
+        direction: rtl;
+    }
+
     textarea {
       width: 100%;
       height: 100px;
       text-align: right;
-      direction: rtl;
-      font-family: 'UKIJEkran';
+      border-radius: 4px;
     }
 
+    textarea:focus {
+      outline: none !important;
+      background: rgba(255, 192, 172, 0.06);
+      border:1px solid #FF5722;
+    }
+    
     .btn {
       float: left;
       color: white;
@@ -69,31 +79,45 @@
       clear: both;
     }
 
+    li {
+      color: black;
+    }
+    li:nth-child(odd) {
+      color: #777;
+    }
+    li:nth-child(even) {
+      color: blue;
+    }
+
     </style>
 </head>
 <body>
 <div class="row text">
 <textarea id="text1" class="try-it"></textarea></div>
 <div class="row">
-  <button class="btn success" onclick="clearContent('#text1', '#text3')">clear</button>
+  <button class="btn success" onclick="clearContent('#text1')">clear</button>
   <button class="btn info" onclick="copyContent('#text1')">copy</button>
   <button class="btn warning" onclick="smaller('text1')">-</button>
   <button class="btn danger" onclick="bigger('text1')">+</button>
 </div>
 
-<div class="row text">
-<textarea id="text2"></textarea></div>
-<div class="row">
-  <button class="btn success" onclick="clearContent('#text2', '#text4')">clear</button>
-  <button class="btn info" onclick="copyContent('#text2')">copy</button>
-  <button class="btn warning" onclick="smaller('text2')">-</button>
-  <button class="btn danger" onclick="bigger('text2')">+</button>
-</div>
-<div class="row text">
-<textarea id="text3"></textarea></div>
-<div class="row text">
-<textarea id="text4"></textarea></div>
+<ol>
+</ol>
+<button onclick="removeLi()">asd</button>
 
+
+
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p").append($("#text2").val());
+    });
+
+    $("#btn2").click(function(){
+        $("ol").append("<li>سىناق</li>");
+    });
+});
+</script>
 
 <script type="text/javascript">
   function bigger(elementId) {
@@ -128,9 +152,15 @@ function copy2clipboard(textarea) {
       document.execCommand('copy');
     }
 
-    function clearContent(jquerySelector, other){
-      $(other).val($(jquerySelector).val());
-      $(jquerySelector).val("");
+    function clearContent(jquerySelector){
+      var str = $(jquerySelector).val().trim();
+      if (str)
+        $("ol").append('<li>'+ (str) +'</li>');
+        $(jquerySelector).val("");
+    }
+
+    function removeLi(){
+      $('ol').empty();
     }
 
     </script>
