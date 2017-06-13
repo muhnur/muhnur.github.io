@@ -96,14 +96,37 @@
       clear: both;
     }
 
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
     li {
-      color: black;
+        color: #868484;
+        padding-right: 10px;
     }
+
     li:nth-child(odd) {
-      color: #777;
+        background: #fbfbfb;
     }
+
     li:nth-child(even) {
-      color: blue;
+        background: #f7f7f7;
+    }
+
+    li:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    li button {
+        width: 25px !important;
+        height: 20px !important;
+        float: left;
+        line-height: 17px;
+        background: transparent;
+        border: none;
     }
 
     </style>
@@ -119,16 +142,20 @@
 </div>
 
 <ul>
-  <li>ئەسسالامۇ ئەلەيكۇم</li>
-  <li>ۋەئەلەيكۇم ئەسسالام</li>
-  <li>ياخشىمۇ؟</li>
+  <li>ئەسسالامۇ ئەلەيكۇم<button class='removebtn'  onclick='dlt(this)' >❌</button></li>
+  <li>ۋەئەلەيكۇم ئەسسالام<button class='removebtn'  onclick='dlt(this)' >❌</button></li>
+  <li>ياخشىمۇ؟<button class='removebtn'  onclick='dlt(this)' >❌</button></li>
 </ul>
 
 <button class="btn warning left right" style="width: 100%; background: #607D8B;" onclick="removeLi()">تازىلاش</button>
 
 
-
 <script type="text/javascript">
+  function dlt(e){
+     $(e).parent().remove();
+  }
+
+
   function bigger(elementId) {
     var a = document.getElementById(elementId).clientHeight;
     document.getElementById(elementId).style.height = (a+20)+'px';
@@ -137,10 +164,6 @@
   function smaller(elementId) {
     var a = document.getElementById(elementId).clientHeight;
     document.getElementById(elementId).style.height = (a-20)+'px';
-  }
-
-  function clearContents(element) {
-    document.getElementById(element).value = "";
   }
 
 function copy2clipboard(textarea) {
@@ -164,7 +187,7 @@ function copy2clipboard(textarea) {
     function clearContent(jquerySelector){
       var str = $(jquerySelector).val().trim();
       if (str)
-        $("ul").append('<li>'+ (str) +'</li>');
+        $("ul").prepend("<li>"+ (str) + "<button class='removebtn'  onclick='dlt(this)' >❌</button></li>");
         $(jquerySelector).val("");
     }
 
