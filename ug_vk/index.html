@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script type="text/javascript">
-    
+
     var UG_VK_OPTS = {
       all: true,
       blacklist: ['url', 'email']
@@ -185,5 +185,25 @@ function copy2clipboard(textarea) {
 
     </script>
 
+
+    <!-- 1. Define some markup -->
+    <textarea id="bar">hello</textarea>
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#bar">Cut</button>
+
+    <!-- 2. Include library -->
+    <script src="clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard -->
+    <script>
+    var clipboard = new Clipboard('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 </body>
 </html>
