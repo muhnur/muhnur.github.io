@@ -163,12 +163,18 @@
 
   function bigger(elementId) {
     var a = document.getElementById(elementId).clientHeight;
-    document.getElementById(elementId).style.height = (a+20)+'px';
+    //document.getElementById(elementId).style.height = (a+20)+'px';
+    $("#"+elementId).animate(
+      {height: (a+20)+'px'}, 200
+    );
   }
 
   function smaller(elementId) {
     var a = document.getElementById(elementId).clientHeight;
-    document.getElementById(elementId).style.height = (a-20)+'px';
+    //document.getElementById(elementId).style.height = (a-20)+'px';
+    $("#"+elementId).animate(
+      {height: (a-20)+'px'}, 200
+    );
   }
 
 function copy2clipboard(textarea) {
