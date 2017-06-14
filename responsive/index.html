@@ -1,8 +1,8 @@
 
-  <!DOCTYPE html><html class=''>
-  <head>
-    <meta charset='UTF-8'>
-   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!DOCTYPE html><html class=''>
+<head>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 
 
@@ -56,8 +56,18 @@
 
   td:last-of-type, th:last-of-type {
     border-right: none;
-    }</style></head><body>
-      <table>
+    }
+  .scroll {
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+    </style>
+  </head>
+
+  <body>
+      <table class="scroll">
         <thead>
           <tr>
             <th>IP</th>
