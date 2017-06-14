@@ -75,16 +75,16 @@
         border-bottom-right-radius: 4px;
     }
 
-    .success {background-color: #009688;} /* Green */
+    .success {background-color: #009688;     width: 30%;} /* Green */
     .success:hover {background-color: #02796e;}
 
-    .info {background-color: #2196F3;} /* Blue */
+    .info {background-color: #2196F3;     width: 30%;} /* Blue */
     .info:hover {background: #0b7dda;}
 
-    .warning {background-color: #ff9800;} /* Orange */
+    .warning {background-color: #ff9800;     width: 20%;} /* Orange */
     .warning:hover {background: #e68a00;}
 
-    .danger {background-color: #f44336;} /* Red */
+    .danger {background-color: #f44336;     width: 20%;} /* Red */
     .danger:hover {background: #da190b;}
 
     .default {background-color: #e7e7e7; color: black;} /* Gray */
@@ -102,8 +102,10 @@
     }
 
     li {
-        color: #868484;
-        padding-right: 10px;
+      color: #868484;
+      padding: 3px 10px;
+      min-height: 25px;
+      line-height: 25px;
     }
 
     li:nth-child(odd) {
@@ -111,7 +113,8 @@
     }
 
     li:nth-child(even) {
-        background: #f7f7f7;
+      background: #f7f7f7;
+          color: #FF9800;
     }
 
     li:after {
@@ -121,12 +124,14 @@
     }
 
     li button {
-        width: 25px !important;
-        height: 20px !important;
-        float: left;
-        line-height: 17px;
-        background: transparent;
-        border: none;
+      float: left;
+      width: 25px !important;
+      height: 25px !important;
+      line-height: 25px;
+      background: transparent;
+      color: inherit;
+      border: solid 1px #efeeee;
+      border-radius: 4px;
     }
 
     </style>
@@ -142,9 +147,9 @@
 </div>
 
 <ul>
-  <li>ئەسسالامۇ ئەلەيكۇم<button class='removebtn'  onclick='dlt(this)' >❌</button></li>
-  <li>ۋەئەلەيكۇم ئەسسالام<button class='removebtn'  onclick='dlt(this)' >❌</button></li>
-  <li>ياخشىمۇ؟<button class='removebtn'  onclick='dlt(this)' >❌</button></li>
+  <li>ئەسسالامۇ ئەلەيكۇم<button class='removebtn'  onclick='dlt(this)' >X</button></li>
+  <li>ۋەئەلەيكۇم ئەسسالام<button class='removebtn'  onclick='dlt(this)' >X</button></li>
+  <li>ياخشىمۇ؟<button class='removebtn'  onclick='dlt(this)' >X</button></li>
 </ul>
 
 <button class="btn warning left right" style="width: 100%; background: #607D8B;" onclick="removeLi()">تازىلاش</button>
@@ -187,7 +192,7 @@ function copy2clipboard(textarea) {
     function clearContent(jquerySelector){
       var str = $(jquerySelector).val().trim();
       if (str)
-        $("ul").prepend("<li>"+ (str) + "<button class='removebtn'  onclick='dlt(this)' >❌</button></li>");
+        $("ul").prepend("<li>"+ (str) + "<button class='removebtn'  onclick='dlt(this)' >X</button></li>");
         $(jquerySelector).val("");
     }
 
