@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Muhnur's Page</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <style>
+
+    .row  {
+        padding: 5px 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 4px;
+      border-color: #fdca80;
+    }
+
+
+    button:focus {
+      outline: none !important;
+    }
+    textarea:focus {
+      outline: none !important;
+      background-color: #fff6e9;
+      border:1px solid #FF5722;
+    }
+
+    .btn {
+      /* float: left; */
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 25%;
+      border: 0;
+      border-radius:4px
+    }
+
+
+    .success {background-color: #009688;     width: 50%;} /* Green */
+    .success:hover {background-color: #02796e;}
+
+    .info {background-color: #2196F3;     width: 20%;} /* Blue */
+    .info:hover {background: #0b7dda;}
+
+    .warning {background-color: #ff9800;     width: 15%;} /* Orange */
+    .warning:hover {background: #e68a00;}
+
+    .danger {background-color: #f44336;     width: 13%;} /* Red */
+    .danger:hover {background: #da190b;}
+
+    .default {background-color: #e7e7e7; color: black;} /* Gray */
+    .default:hover {background: #ddd;}
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+      color: #868484;
+      padding: 3px 10px;
+      min-height: 25px;
+      line-height: 25px;
+    }
+
+    li:nth-child(odd) {
+        background: #fbfbfb;
+    }
+
+    li:nth-child(even) {
+      background: #f7f7f7;
+          color: #FF9800;
+    }
+
+    li:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    li button {
+      float: left;
+      width: 25px !important;
+      height: 25px !important;
+      line-height: 25px;
+      background: transparent;
+      color: inherit;
+      border: solid 1px #efeeee;
+      border-radius: 4px;
+    }
+
+    span {
+      margin-right: 10px;
+    }
+
+    </style>
+</head>
+<body>
+<div class="row text">
+<textarea id="text1" class="try-it">take book look good</textarea></div>
+<div class="row">
+  <button class="btn success left" id="btnStart">Start</button>
+  <button class="btn info" onclick="dlt('#text1')">Clear</button>
+  <button class="btn warning" onclick="smaller('text1')">-</button>
+  <button class="btn danger right" onclick="bigger('text1')">+</button>
+</div>
+
+
+<div class="row text">
+  <p>&nbsp;</p>
+</div>
+
+<div class="row text">
+  <video width="256" height="192"  id="myVideo" controls >
+      <source src="https://www.handspeak.com/word/a/alter.mp4" id="mp4Source" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+</div>
+
+
+
+<script type="text/javascript">
+  function dlt(e){
+     $(e).val('');
+  }
+
+  function bigger(elementId) {
+    var a = document.getElementById(elementId).clientHeight;
+    //document.getElementById(elementId).style.height = (a+20)+'px';
+    $("#"+elementId).animate(
+      {height: (a+20)+'px'}, 200
+    );
+  }
+
+  function smaller(elementId) {
+    var a = document.getElementById(elementId).clientHeight;
+    //document.getElementById(elementId).style.height = (a-20)+'px';
+    $("#"+elementId).animate(
+      {height: (a-20)+'px'}, 200
+    );
+  }
+
+function copy2clipboard(textarea) {
+  var copyTextarea = document.querySelector(textarea);
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+}
+
+    function copyContent(jquerySelector){
+      $(jquerySelector).select();
+      document.execCommand('copy');
+    }
+
+    function clearContent(jquerySelector){
+      var str = $(jquerySelector).val().trim();
+      if (str)
+        $("ul").prepend("<li>"+ (str) + "<button class='removebtn'  onclick='dlt(this)' >X</button></li>");
+        $(jquerySelector).val("");
+    }
+
+    function removeLi(){
+      $('ul').empty();
+    }
+
+    $(document).ready(function(){
+      $("#btnStart").click(function(){
+        //boshluqni tazilash
+        var mytext = $.trim($("textarea").val());
+        mytext = mytext.replace(/[^a-zA-Z ]/g, "");
+        if (mytext != '') {
+          $('textarea').val(mytext);
+        }
+
+        var wordArray = mytext.split(" ");  //All words put into Array
+        var WordCount = wordArray.length;  // Count of words
+        console.log(mytext);
+
+        var myspan = '';
+        $("p").empty(); // clear content of p
+        for (i = 0; i < wordArray.length; i++) {
+            myspan = myspan + '<span id="span' + i + '">' + wordArray[i] + '</span>';
+        }
+        $("p").append(myspan);
+        //console.log(myspan);
+
+        var count=0;
+        var player=document.getElementById('myVideo');
+        var mp4Vid = document.getElementById('mp4Source');
+        var f_character = '';
+        var videoSource ='';
+        player.addEventListener('ended',myHandler,false);
+
+        function myHandler(e)
+        {
+           if(!e)
+           {
+              e = window.event;
+           }
+
+           f_character = wordArray[count].substring(0, 1).toLowerCase();   // first character of the word
+           videoSource = 'https://www.handspeak.com/word/' + f_character + '/' + wordArray[count].toLowerCase() + '.mp4';
+
+           $(mp4Vid).attr('src', videoSource);
+           console.log(wordArray[count]);
+           player.load();
+           player.play();
+           $('#span' + count).css("background-color", "Green");
+           $('#span' + count).css("color", "White");
+           //console.log('<span id="span' + count + '">');
+           count++;
+        }
+
+
+      });
+    });
+
+
+
+    </script>
+
+
+</body>
+</html>
