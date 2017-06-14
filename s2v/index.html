@@ -21,6 +21,10 @@
       border-color: #fdca80;
     }
 
+    textarea, span {
+        font-size: 18px;
+        font-family: Arial;
+    }
 
     button:focus {
       outline: none !important;
@@ -110,7 +114,7 @@
 </head>
 <body>
 <div class="row text">
-<textarea id="text1" class="try-it">take book look good</textarea></div>
+<textarea id="text1" class="try-it">take book look good take book look good take book look good take book look good</textarea></div>
 <div class="row">
   <button class="btn success left" id="btnStart">Start</button>
   <button class="btn info" onclick="dlt('#text1')">Clear</button>
@@ -124,7 +128,7 @@
 </div>
 
 <div class="row text">
-  <video width="500" height="300"  id="myVideo" controls >
+  <video width="500" height="300"  id="myVideo" controls autoplay>
       <source src="https://www.handspeak.com/word/a/alter.mp4" id="mp4Source" type="video/mp4">
       Your browser does not support the video tag.
   </video>
@@ -221,11 +225,12 @@ function copy2clipboard(textarea) {
            videoSource = 'https://www.handspeak.com/word/' + f_character + '/' + wordArray[count].toLowerCase() + '.mp4';
 
            $(mp4Vid).attr('src', videoSource);
-           console.log(wordArray[count]);
+
            player.load();
-           player.play();
            $('#span' + count).css("background-color", "Green");
            $('#span' + count).css("color", "White");
+           player.play();
+
            //console.log('<span id="span' + count + '">');
            count++;
         }
