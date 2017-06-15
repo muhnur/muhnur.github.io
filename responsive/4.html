@@ -1,0 +1,257 @@
+<html><head>
+  <title>Flex  Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  
+ 
+ <style class="cp-pen-styles">
+ .scroll {
+   white-space: nowrap;
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch;
+   -ms-overflow-style: -ms-autohiding-scrollbar;
+ }
+
+ .example-two-header .logo {
+   width: 25%;
+ }
+ .example-two-header nav {
+   width: 75%;
+ }
+
+ .example-three .logo,
+ .example-three nav {
+   width: 100%;
+ }
+ .example-three .nav-item {
+   color: #f6f7ee;
+ }
+
+ header {
+   background: #152637;
+ }
+
+ .example-one-header,
+ .example-two-header {
+   border-radius: 3px;
+ }
+
+ .example-three-header {
+   border-radius: 3px 3px 0 0;
+ }
+
+ .example-three nav {
+   background: #727c87;
+   white-space: nowrap;
+   overflow-x: scroll; 
+   -webkit-overflow-scrolling: touch; 
+   border-radius: 0 0 3px 3px;
+ }
+
+ .logo {
+   text-align: center;
+   font-weight: 700;
+   color: #727c87;
+   border-right: 1px solid rgba(114, 124, 135, 0.4);
+   padding: 12px 24px 13px;
+ }
+
+ .nav-item {
+   padding: 12px 16px 13px;
+ }
+ .nav-item:not(:last-child) {
+   border-right: 1px solid rgba(114, 124, 135, 0.2);
+ }
+
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",  "Fira Sans", "Droid Sans", "Helvetica Neue",  sans-serif;
+   max-width: 360px;
+   margin: 5% auto;
+   color: #64cce3;
+   line-height: 1.5;
+ }
+
+ header,
+ nav {
+   font-size: 0;
+ }
+
+ .logo,
+ .nav-item {
+   font-size: 14px;
+ }
+
+ .logo,
+ .nav-item,
+ .vertical-align-middle {
+   display: inline-block;
+   vertical-align: middle;
+ }
+
+ .title {
+   margin: 24px 0 6px;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: .2em;
+   color: #999;
+ }
+ </style>
+
+</head>
+
+<body style="
+    max-width: 700px;
+">
+  
+  <div class="container example-two" style="
+">
+    <div class="title">Nav only scrolling</div>
+    <header class="example-two-header">
+      <span class="logo"><table style="width:100%">
+  <tbody> <tr><td>Fiyatı (TL)</td></tr> 
+<tr><td>Model Yılı</td></tr> 
+<tr><td>Kilometresi</td></tr> 
+<tr><td>Yakıt Türü</td></tr> 
+<tr><td>Vites Tipi (ileri)</td></tr> 
+<tr><td>Silindir Hacmi (cc)</td></tr> 
+<tr><td>Beygir Gücü (hp)</td></tr> 
+<tr><td>Maksimum Tork (nm)</td></tr> 
+<tr><td>0-100 Hızlanma (sn)</td></tr> 
+<tr><td>Maksimum Hız (km/s)</td></tr> 
+<tr><td>Şehir İçi Ort. Tüketim (lt)</td></tr> 
+<tr><td>Şehir Dışı Ort. Tüketim (lt)</td></tr> 
+<tr><td>Karma Yakıt Tüketimi (lt)</td></tr> 
+<tr><td>Yakıt Deposu (lt)</td></tr> 
+<tr><td>Uzunluk (mm)</td></tr> 
+<tr><td>Genişlik (mm)</td></tr> 
+<tr><td>Yükseklik (mm)</td></tr> 
+<tr><td>Bagaj Hacmi (lt)</td></tr> 
+<tr><td>Boş Ağırlık (kg)</td></tr> 
+<tr><td>Lastik Ebatları</td></tr> 
+<tr><td>Co2 Emisyon Oranı (gr/km)</td></tr> 
+<tr><td>Euro Ncap Puanı</td></tr> 
+<tr><td>Sürücü Hava Yastığı</td></tr> 
+<tr><td>Yolcu Hava Yastığı</td></tr> 
+<tr><td>Yan/Perde Hava Yastığı</td></tr> 
+<tr><td>Diz Hava Yastığı</td></tr> 
+<tr><td>Lastik Basınç Kontrol Sistemi</td></tr> 
+<tr><td>ABS (Antiblokaj Fren Sİstemi)</td></tr> 
+<tr><td>EBD (Fren Güç Dağılım Sistemi)</td></tr> 
+<tr><td>ESP (Elektronik Denge Sistemi)</td></tr> 
+<tr><td>ASR (Çekiş Düzenleme Sistemi)</td></tr> 
+<tr><td>Ön Sis Farları</td></tr> 
+<tr><td>LED Gündüz Farları</td></tr> 
+<tr><td>Alaşım Jantlar</td></tr> 
+<tr><td>Arka Park Sensörü</td></tr> 
+<tr><td>Elektronik Park Freni</td></tr> 
+<tr><td>Geri Görüş Kamerası</td></tr> 
+<tr><td>Yol Bilgisayarı</td></tr> 
+<tr><td>Hız Sabitleme Sistemi</td></tr> 
+<tr><td>Yokuş Kalkış Desteği</td></tr> 
+<tr><td>Yağmur Sensörü</td></tr> 
+<tr><td>Far Sensörü</td></tr> 
+<tr><td>Start &amp; Stop Sistemi</td></tr> 
+<tr><td>USB Girişi</td></tr> 
+<tr><td>Bluetooth Bağlantısı</td></tr> 
+<tr><td>Navigasyon Sistemi</td></tr> 
+<tr><td>Katlanabilir Yan Aynalar</td></tr> 
+<tr><td>Xenon Ön Farlar</td></tr> 
+<tr><td>Klima</td></tr> 
+<tr><td>Çok Bölgeli Dijital Klima</td></tr> 
+<tr><td>Soğutmalı Torpido Gözü</td></tr> 
+<tr><td>Isıtmalı Sürücü Koltuğu</td></tr> 
+<tr><td>Elektrikli Sürücü Koltuk Ayarı</td></tr> 
+<tr><td>Deri Döşeme Koltuklar</td></tr> 
+<tr><td>Deri Direksiyon Simidi</td></tr> 
+<tr><td>Fonksiyonel Direksiyon</td></tr> 
+<tr><td>Elektrikli Arka Camlar</td></tr> 
+<tr><td>Ön Kol Dayama Sistemi</td></tr> 
+<tr><td>Otomatik Kararan Dikiz Aynası</td></tr> 
+<tr><td>Anahtarsız Giriş/Çalıştırma</td></tr> 
+<tr><td>Refakatçi Aydınlatma</td></tr> 
+<tr><td>Sunroof/Cam Tavan</td></tr> 
+<tr><td>Koyu Renk Arka Camlar</td></tr> 
+</tbody></table></span>
+      <nav class="vertical-align-middle scroll">
+        <table class="nav-item" style="/* width:100% */">
+  <tbody> <tr><td>Satış Dışı</td><td>Satış Dışı</td><td>Satış Dışı</td><td>Satış Dışı</td><td>Satış Dışı</td></tr>
+<tr><td>2015</td><td>2015</td><td>2015</td><td>2015</td><td>2015</td></tr> 
+<tr><td>0 KM</td><td>0 KM</td><td>0 KM</td><td>0 KM</td><td>0 KM</td></tr> 
+<tr><td>Benzin</td><td>Benzin</td><td>Benzin</td><td>Benzin</td><td>Benzin</td></tr> 
+<tr><td>Otomatik 8 ileri</td><td>Otomatik 8 ileri</td><td>Otomatik 8 ileri</td><td>Otomatik 8 ileri</td><td>Otomatik 8 ileri</td></tr> 
+<tr><td>1798</td><td>1798</td><td>1798</td><td>1798</td><td>1798</td></tr> 
+<tr><td>170</td><td>170</td><td>170</td><td>170</td><td>170</td></tr> 
+<tr><td>320</td><td>320</td><td>320</td><td>320</td><td>320</td></tr> 
+<tr><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td></tr> 
+<tr><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td></tr> 
+<tr><td>225</td><td>225</td><td>225</td><td>225</td><td>225</td></tr> 
+<tr><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td></tr> 
+<tr><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td></tr> 
+<tr><td>63</td><td>63</td><td>63</td><td>63</td><td>63</td></tr> 
+<tr><td>1798</td><td>1798</td><td>1798</td><td>1798</td><td>1798</td></tr> 
+<tr><td>170</td><td>170</td><td>170</td><td>170</td><td>170</td></tr> 
+<tr><td>320</td><td>320</td><td>320</td><td>320</td><td>320</td></tr> 
+<tr><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td></tr> 
+<tr><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td></tr> 
+<tr><td>225</td><td>225</td><td>225</td><td>225</td><td>225</td></tr> 
+<tr><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td></tr> 
+<tr><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td></tr> 
+<tr><td>63</td><td>63</td><td>63</td><td>63</td><td>63</td></tr> 
+<tr><td>320</td><td>320</td><td>320</td><td>320</td><td>320</td></tr> 
+<tr><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td></tr> 
+<tr><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td></tr> 
+<tr><td>225</td><td>225</td><td>225</td><td>225</td><td>225</td></tr> 
+<tr><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td></tr> 
+<tr><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td></tr> 
+<tr><td>63</td><td>63</td><td>63</td><td>63</td><td>63</td></tr> 
+<tr><td>1798</td><td>1798</td><td>1798</td><td>1798</td><td>1798</td></tr> 
+<tr><td>170</td><td>170</td><td>170</td><td>170</td><td>170</td></tr> 
+<tr><td>320</td><td>320</td><td>320</td><td>320</td><td>320</td></tr> 
+<tr><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td></tr> 
+<tr><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td></tr> 
+<tr><td>225</td><td>225</td><td>225</td><td>225</td><td>225</td></tr> 
+<tr><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td></tr> 
+<tr><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td></tr> 
+<tr><td>63</td><td>63</td><td>63</td><td>63</td><td>63</td></tr> 
+<tr><td>320</td><td>320</td><td>320</td><td>320</td><td>320</td></tr> 
+<tr><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td></tr> 
+<tr><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td></tr> 
+<tr><td>225</td><td>225</td><td>225</td><td>225</td><td>225</td></tr> 
+<tr><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td></tr> 
+<tr><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td></tr> 
+<tr><td>63</td><td>63</td><td>63</td><td>63</td><td>63</td></tr> 
+<tr><td>1798</td><td>1798</td><td>1798</td><td>1798</td><td>1798</td></tr> 
+<tr><td>170</td><td>170</td><td>170</td><td>170</td><td>170</td></tr> 
+<tr><td>320</td><td>320</td><td>320</td><td>320</td><td>320</td></tr> 
+<tr><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td></tr> 
+<tr><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td></tr> 
+<tr><td>225</td><td>225</td><td>225</td><td>225</td><td>225</td></tr> 
+<tr><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td></tr> 
+<tr><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td></tr> 
+<tr><td>63</td><td>63</td><td>63</td><td>63</td><td>63</td></tr> 
+<tr><td>320</td><td>320</td><td>320</td><td>320</td><td>320</td></tr> 
+<tr><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td><td>8,3</td></tr> 
+<tr><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td><td>6,9</td></tr> 
+<tr><td>225</td><td>225</td><td>225</td><td>225</td><td>225</td></tr> 
+<tr><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td><td>5,8</td></tr> 
+<tr><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td><td>5,1</td></tr> 
+<tr><td>63</td><td>63</td><td>63</td><td>63</td><td>63</td></tr> 
+<tr><td>1798</td><td>1798</td><td>1798</td><td>1798</td><td>1798</td></tr>  
+</tbody></table>
+        
+        
+        
+        
+      </nav>
+    </header>
+  </div>
+  
+
+
+
+
+</body></html>
