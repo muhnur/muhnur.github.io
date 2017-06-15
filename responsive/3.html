@@ -1,0 +1,175 @@
+<html><head>
+  <title>Flex  Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  
+ 
+ <style class="cp-pen-styles">
+ .scroll {
+   white-space: nowrap;
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch;
+   -ms-overflow-style: -ms-autohiding-scrollbar;
+ }
+
+ .example-two-header .logo {
+   width: 25%;
+ }
+ .example-two-header nav {
+   width: 75%;
+ }
+
+ .example-three .logo,
+ .example-three nav {
+   width: 100%;
+ }
+ .example-three .nav-item {
+   color: #f6f7ee;
+ }
+
+ header {
+   background: #152637;
+ }
+
+ .example-one-header,
+ .example-two-header {
+   border-radius: 3px;
+ }
+
+ .example-three-header {
+   border-radius: 3px 3px 0 0;
+ }
+
+ .example-three nav {
+   background: #727c87;
+   white-space: nowrap;
+   overflow-x: scroll; 
+   -webkit-overflow-scrolling: touch; 
+   border-radius: 0 0 3px 3px;
+ }
+
+ .logo {
+   text-align: center;
+   font-weight: 700;
+   color: #727c87;
+   border-right: 1px solid rgba(114, 124, 135, 0.4);
+   padding: 12px 24px 13px;
+ }
+
+ .nav-item {
+   padding: 12px 16px 13px;
+ }
+ .nav-item:not(:last-child) {
+   border-right: 1px solid rgba(114, 124, 135, 0.2);
+ }
+
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",  "Fira Sans", "Droid Sans", "Helvetica Neue",  sans-serif;
+   max-width: 360px;
+   margin: 5% auto;
+   color: #64cce3;
+   line-height: 1.5;
+ }
+
+ header,
+ nav {
+   font-size: 0;
+ }
+
+ .logo,
+ .nav-item {
+   font-size: 14px;
+ }
+
+ .logo,
+ .nav-item,
+ .vertical-align-middle {
+   display: inline-block;
+   vertical-align: middle;
+ }
+
+ .title {
+   margin: 24px 0 6px;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: .2em;
+   color: #999;
+ }
+ </style>
+
+</head>
+
+<body>
+  
+  <div class="container example-two">
+    <div class="title">Nav only scrolling</div>
+    <header class="example-two-header">
+      <span class="logo" style="
+    display: none;
+">Logo</span> <table class="logo nav-item">
+  <tbody><tr>
+    
+      <th>Firstname</th>
+    
+     
+     
+    
+  </tr>
+  <tr>
+    <td>Jill</td>
+    
+    
+  </tr>
+  <tr>
+    <td>Eve</td>
+    
+    
+  </tr>
+  <tr>
+    <td>John</td>
+    
+    
+  </tr>
+</tbody></table>
+      <nav class="vertical-align-middle scroll">
+        
+        
+        
+        <table style="width:100%" class="nav-item">
+  <tbody><tr>
+    
+      <th>Firstname</th><th>Firstname</th>
+    
+    <th>Lastname</th><th>Lastname</th> 
+     
+    <th>Age</th><th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</tbody></table>
+        
+      </nav>
+    </header>
+  </div>
+  
+
+
+
+</body></html>
