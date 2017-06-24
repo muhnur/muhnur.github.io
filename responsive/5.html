@@ -1,0 +1,446 @@
+
+<!DOCTYPE html><html class=''>
+<head>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+  <style class="cp-pen-styles">
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: helvetica;
+  }
+
+  html, body {
+    max-width: 100vw;
+    padding: 4px;
+  }
+
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1); */
+  }
+
+  td, th {
+    padding: .5rem;
+    border-right: none;
+    border-left: none;
+  }
+
+  tr {
+    border: solid 1px #e0e0e0;
+    border-right: none;
+    border-left: none;
+  }
+
+  th {
+    text-align: left;
+    /* background-color: rgb(190, 220, 250);
+    text-transform: uppercase; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* border-bottom: rgb(50, 50, 100) solid 2px; */
+    border-top: none;
+  }
+
+  td {
+    white-space: nowrap;
+    border-bottom: none;
+    color: rgb(20, 20, 20);
+  }
+
+  td:last-of-type, th:last-of-type {
+    border-right: none;
+  }
+  .scroll {
+    white-space: nowrap;
+    overflow-x: auto;
+
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* max-height: 400px; */
+  }
+
+  img {
+    width: 250px;
+    height: 180px;
+    margin: auto;
+    padding: 0;
+    display: block;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: 7px 0;
+  }
+
+  tr.gray {background: #f3f3f3}
+
+  thead th {
+    padding: 5px 20px !important;
+  }
+  table {
+    font-size: 14px;
+  }
+  tr td:first-child, tr th:first-child {
+    padding: 9px 20px;
+}
+
+.btn  {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+
+    display: block;
+   width: 100%;
+
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #379437;
+}
+
+td + td {
+    padding-left: 40px;
+}
+  </style>
+</head>
+
+<body>
+  <table class="scroll">
+    <thead>
+      <tr>
+        <th></th>
+        <th><img src="img/SKODA_KODIAQ.png" alt="Skoda Kodiaqw"  ><h4>Skoda Kodiaq</h4></th>
+        <th><img src="img/BMW_X5.png" alt="BMW "><h4>BMW X5<h4></h4></th>
+        <th><img src="img/Audi_Q5.png" alt="Audi Q5 "><h4>Audi Q5</h4></th>
+        <th><img src="img/Hyundai_tuscon.png" alt="Hyundai Tuscon"  ><h4>Hyundai Tuscon</h4></th>
+        <th><img src="img/HONDA_CR-V.png" alt="Honda CR-V"  ><h4>Honda CR-V</h4></th>
+        <th><img src="img/PORSHE_CAYANNE.png" alt="Porshe Cayanne"  ><h4>Porsche Cayanne</h4></th>
+        <th><img src="img/VOLVO_XC60.png" alt="Volvo XC60"  ><h4>Volvo XC60</h4></th>
+        <th><img src="img/MERCEDES_GLE.png" alt="Mercedes GLE"  ><h4>Mercedes GLE</h4></th>
+        <th><img src="img/SEAT_ATECA.png" alt="Seat Ateca"  ><h4>Seat Ateca</h4></th>
+        <th><img src="img/NISSAN_QASHQAI.png" alt="Nissan Qashqai "  ><h4>Nissan Qashqai</h4></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="gray">
+        <th>Motor</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Silindir hacmi (cc)</td>
+        <td>1.395</td>
+        <td>1.995</td>
+        <td>1.968</td>
+        <td>1.591</td>
+        <td>1.597	</td>
+        <td>2,967 cm³</td>
+        <td>1969</td>
+        <td>2143 </td>
+        <td>1598 </td>
+        <td>1197</td>
+      </tr>
+      <tr>
+        <td>Güç bg/dev/dk</td>
+        <td>92 (125) / 5000-6000	</td>
+        <td>231/4400-4400</td>
+        <td>140 (190)/3800-4200</td>
+        <td>132 / 6.300	</td>
+        <td>120 PS</td>
+        <td>262 HP</td>
+        <td>181 hp</td>
+        <td>204 hp</td>
+        <td>115 hp</td>
+        <td>115 hp</td>
+      </tr>
+      <tr>
+        <td>Tork nm/devir/dak</td>
+        <td>200nm </td>
+        <td>500nm </td>
+        <td>400nm </td>
+        <td>160,8nm </td>
+        <td>300nm</td>
+        <td>580nm</td>
+        <td>400nm</td>
+        <td>500nm</td>
+        <td>250 /1500 - 3250 </td>
+        <td>165nm</td>
+      </tr>
+
+      <tr  class="gray">
+        <th>Yakıt Tüketimi</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Şehir içi (lt/100 km)</td>
+        <td>7,5</td>
+        <td>6,2</td>
+        <td>5,6–5,3</td>
+        <td>8,6 </td>
+        <td>4,8</td>
+        <td>7.6 </td>
+        <td>5,3</td>
+        <td>6.3 </td>
+        <td>4,7 </td>
+        <td>6,9</td>
+      </tr>
+      <tr>
+        <td>Şehir dışı (lt/100 km)</td>
+        <td>5,3</td>
+        <td>5,2</td>
+        <td>5,1–4,7</td>
+        <td>5,6</td>
+        <td>4,4 </td>
+        <td>6,0</td>
+        <td>4,4</td>
+        <td>5.3 </td>
+        <td>4,1</td>
+        <td>4,9</td>
+      </tr>
+      <tr>
+        <td>Ortalama (lt/100 km)</td>
+        <td>6,1</td>
+        <td>5,6</td>
+        <td>5,3–4,9</td>
+        <td>6,7</td>
+        <td>4,5</td>
+        <td>6,6</td>
+        <td>4,7</td>
+        <td>5.7 </td>
+        <td>4,3</td>
+        <td>5,6</td>
+      </tr>
+      <tr>
+        <td>CO<sub>2</sub> emisyonu (gr/km)</td>
+        <td>139</td>
+        <td>146</td>
+        <td>138–129</td>
+        <td>156</td>
+        <td>119</td>
+        <td>172</td>
+        <td>124 g/km</td>
+        <td>143 g/km</td>
+        <td>113 g/km</td>
+        <td>129 g/km</td>
+      </tr>
+      <tr class="gray">
+        <th>Performans</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Maksimum hız km/sa</td>
+        <td>190 km/sa </td>
+        <td>220 km/sa </td>
+        <td>218 km/sa	</td>
+        <td>182 km/sa </td>
+        <td>182 km/sa</td>
+        <td>221 km/sa</td>
+        <td>210 km/sa</td>
+        <td>212 km/sa</td>
+        <td>184 km/sa</td>
+        <td>185 km/sa</td>
+      </tr>
+      <tr>
+        <td>0-100 km/sa hızlanma</td>
+        <td>10,5 saniye </td>
+        <td>7,7 saniye </td>
+        <td>7,9 saniye </td>
+        <td>11,5 saniye </td>
+        <td>11.2 saniye</td>
+        <td>7,3 saniye</td>
+        <td>8.5 saniye</td>
+        <td>8,6 saniye</td>
+        <td>11,5 saniye</td>
+        <td>10,9 saniye </td>
+      </tr>
+
+      <tr class="gray">
+        <th>Boyutlar</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Uz./Gen./Yük. mm.</td>
+        <td>4.697mm / 1.882mm / 1.676mm	</td>
+        <td>4.886mm / 1.938mm / 1.762mm </td>
+        <td>4.629mm / 1.880mm / 1.653mm	</td>
+        <td>4.475mm / 1.850mm / 1.660mm</td>
+        <td>4.605mm / 1.820mm / 1.670mm</td>
+        <td>4.855mm / 1.939mm / 1.705mm</td>
+        <td>4.644mm / 1.891mm / 1.713mm	</td>
+        <td>4.819mm / 1.935mm / 1.796mm</td>
+        <td>4.363mm / 1.841mm / 1.615mm</td>
+        <td>4.377mm / 1.806mm / 1.590mm</td>
+      </tr>
+      <tr>
+        <td>Aks mesafesi mm.</td>
+        <td>2.791 mm</td>
+        <td>2.933 mm</td>
+        <td>2.807 mm</td>
+        <td>2670 mm</td>
+        <td>2630</td>
+        <td>2,895 mm</td>
+        <td>2865 mm</td>
+        <td>2915 mm</td>
+        <td>2638 mm</td>
+        <td>2646 mm</td>
+      </tr>
+      <tr>
+        <td>Bagaj Kapasitesi lt.</td>
+        <td>720 / 2.065</td>
+        <td>650 lt</td>
+        <td>550 lt</td>
+        <td>488 lt</td>
+        <td>589 lt</td>
+        <td>618 lt</td>
+        <td>495 lt</td>
+        <td>690 lt</td>
+        <td>510 lt</td>
+        <td>401 lt</td>
+      </tr>
+      <tr>
+        <td>Boş Ağırlık kg.</td>
+        <td>1,502 kg </td>
+        <td>2,115 kg </td>
+        <td>1,845 kg </td>
+        <td>1,454 kg</td>
+        <td>1,615 kg</td>
+        <td>2,185 kg</td>
+        <td>1,854 kg</td>
+        <td>2,150 kg</td>
+        <td>1,280 kg</td>
+        <td>1,318-1,434 kg</td>
+      </tr>
+      <tr class="gray">
+        <th>Anh. Tes. Fiyat</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="gray">
+        <th>Site</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Kullandı/Kullanıyor kişi</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr >
+        <td>Yorumlar</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr >
+        <td></td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+        <td><a href="#" class="btn">Gör</a> </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body></html>
