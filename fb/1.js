@@ -1,1 +1,3 @@
-    alert('almilar');
+function myFunction() {
+    alert('almaqchi');
+}
