@@ -1,3 +1,7 @@
 *{
     color: red !important;
 }
+
+body { 
+    background: green;
+}
