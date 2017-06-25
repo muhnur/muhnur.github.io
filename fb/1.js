@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("p").click(function(){
-        $(this).hide();
-    });
+    $("p").append("<b>Appended text</b>");
+
+
 });
